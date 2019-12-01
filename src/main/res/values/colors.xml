@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#202D65</color>
+    <color name="colorPrimaryDark">#5B617E</color>
+    <color name="colorAccent">#202D65</color>
+    <!-- Primary color for the editor -->
+    <color name="editorColorPrimary">#2D3640</color>
+
+    <!-- Primary dark color for the editor -->
+    <color name="editorColorPrimaryDark">#394450</color>
+    <color name="white_fab">#FFFFFF</color>
+</resources>

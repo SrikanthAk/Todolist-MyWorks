@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MyPA</string>
+    <string name="action_delete_all_entries">Delete All Works</string>
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+    <string name="editor_activity_title_new_work">Add New Work</string>
+    <string name="work_title">Work</string>
+    <string name="hint_work_name">Enter Your Work Title</string>
+    <string name="hint_work_desc">Work Description</string>
+    <string name="date_picker">Select Date</string>
+    <string name="pick_time">Select Time</string>
+    <string name="hint_select_date">Select Date</string>
+    <string name="hint_select_time">Select Time</string>
+    <string name="time_format">%02d:%02d</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="empty_view_title_text">You do not have any works</string>
+    <string name="empty_view_subtitle_text">Get started by adding a work</string>
+    <string name="editor_activity_title_edit_work">Edit Work</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="editor_delete_work_successful">Work deleted</string>
+    <string name="editor_delete_work_failed">Error with deleting work</string>
+    <string name="delete_dialog_msg">Delete this work?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>
