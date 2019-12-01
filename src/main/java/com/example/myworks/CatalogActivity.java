@@ -116,8 +116,8 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
                 WorkContract.WorkEntry.COLUMN_WORK_DESCRIPTION,
                 WorkContract.WorkEntry.COLUMN_WORK_DATE,
                 WorkContract.WorkEntry.COLUMN_WORK_TIME};
-        // Perform this raw SQL query "SELECT * FROM pets"
-        // to get a Cursor that contains all rows from the pets table.
+        // Perform this raw SQL query "SELECT * FROM works"
+        // to get a Cursor that contains all rows from the works table.
         //we are using content provider query method using ContentResolver
         return new CursorLoader(this, WorkContract.WorkEntry.CONTENT_URI, projection, null, null, null);
     }

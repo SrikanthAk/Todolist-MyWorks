@@ -203,7 +203,7 @@ public class EditorActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
          super.onPrepareOptionsMenu(menu);
-// If this is a new pet, hide the "Delete" menu item.
+// If this is a new work, hide the "Delete" menu item.
         if (mCurrentWorkUri == null) {
             MenuItem menuItem = menu.findItem(R.id.action_delete);
             menuItem.setVisible(false);
@@ -248,8 +248,8 @@ public class EditorActivity extends AppCompatActivity implements View.OnClickLis
                 WorkContract.WorkEntry.COLUMN_WORK_DESCRIPTION,
                 WorkContract.WorkEntry.COLUMN_WORK_DATE,
                 WorkContract.WorkEntry.COLUMN_WORK_TIME};
-        // Perform this raw SQL query "SELECT * FROM pets"
-        // to get a Cursor that contains all rows from the pets table.
+        // Perform this raw SQL query "SELECT * FROM works"
+        // to get a Cursor that contains all rows from the works table.
         //we are using content provider query method using ContentResolver
         return new CursorLoader(this, mCurrentWorkUri, projection, null, null, null);
     }
@@ -290,7 +290,7 @@ public class EditorActivity extends AppCompatActivity implements View.OnClickLis
         builder.setNegativeButton(R.string.keep_editing, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked the "Keep editing" button, so dismiss the dialog
-                // and continue editing the pet.
+                // and continue editing the work.
                 if (dialog != null) {
                     dialog.dismiss();
                 }
@@ -326,14 +326,14 @@ public class EditorActivity extends AppCompatActivity implements View.OnClickLis
         builder.setMessage(R.string.delete_dialog_msg);
         builder.setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // User clicked the "Delete" button, so delete the pet.
-                deletePet();
+                // User clicked the "Delete" button, so delete the work.
+                deleteWork();
             }
         });
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked the "Cancel" button, so dismiss the dialog
-                // and continue editing the pet.
+                // and continue editing the work.
                 if (dialog != null) {
                     dialog.dismiss();
                 }
@@ -345,7 +345,7 @@ public class EditorActivity extends AppCompatActivity implements View.OnClickLis
         alertDialog.show();
     }
 
-    private void deletePet() {
+    private void deleteWork() {
         if (mCurrentWorkUri != null) {
             int rowsDeleted = getContentResolver().delete(mCurrentWorkUri, null, null);
             if (rowsDeleted == 0) {
